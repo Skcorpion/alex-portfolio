@@ -1,0 +1,253 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: "Oranienbaum", serif;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5 {
+  letter-spacing: 0.9px;
+  line-height: 15px;
+  color: #6C6C6C;
+  cursor: pointer;
+  font-weight: normal;
+  margin: 30px 0;
+  font-size: 20px;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+section {
+  height: 100vh;
+}
+
+.dots li a::before {
+  background-color: #6C6C6C;
+}
+.dots li a.active::before {
+  background-color: #6C6C6C;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.header__title {
+  margin: 45px auto 0 10px;
+  text-align: left;
+  font-size: 28px;
+  position: relative;
+}
+.header__title::after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  left: 0px;
+  bottom: -13px;
+  height: 1px;
+  background-color: black;
+}
+.header__slider {
+  margin: auto 0;
+}
+.header__slider-item {
+  position: relative;
+  height: 70vh;
+}
+.header__slider-item img {
+  height: auto;
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#portfolio, #contact {
+  background-color: #e4d7d7;
+}
+
+.portfolio {
+  padding-top: 10vh;
+}
+.portfolio__slider {
+  position: relative;
+}
+.portfolio__slider-item {
+  position: relative;
+  height: 80vh;
+}
+.portfolio__slider-item img {
+  height: auto;
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.portfolio .slider-btn {
+  display: none !important;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: transparent;
+  top: 0;
+  z-index: 2;
+  padding: 0;
+  border: none;
+  outline: none;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.portfolio .slider-btn svg {
+  stroke: black;
+  margin: 10vw;
+}
+.portfolio .slider-left {
+  left: 0;
+}
+.portfolio .slider-left svg {
+  float: left;
+}
+.portfolio .slider-right {
+  right: 0;
+}
+.portfolio .slider-right svg {
+  float: right;
+}
+
+.contact {
+  padding: 10px 0 40px;
+  overflow-y: auto;
+}
+.contact__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contact__picture {
+  width: 30%;
+  margin-right: 30px;
+}
+.contact__picture img {
+  height: auto;
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+}
+.contact__text {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.contact__name {
+  font-weight: 700;
+  padding: 15px 0 12px;
+}
+.contact__links-item img {
+  width: 25px;
+  height: 25px;
+}
+.contact__email, .contact__phone {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contact__email img, .contact__phone img {
+  width: 23px;
+  height: 23px;
+}
+.contact__email a, .contact__phone a {
+  font-weight: 700;
+  margin-left: 7px;
+}
+.contact__phone {
+  margin-top: 5px;
+}
+
+@media (hover: hover) {
+  .portfolio .slider-btn {
+    display: inline-block !important;
+  }
+  .portfolio .slider-btn:hover {
+    opacity: 1;
+  }
+}
+@media (max-width: 630px) {
+  .contact__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .contact__links {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact__picture {
+    width: 50%;
+    margin: 0 auto 20px;
+  }
+  .contact__text {
+    max-width: 400px;
+  }
+  .contact__email, .contact__phone {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 700px) {
+  .dots {
+    display: none;
+  }
+}

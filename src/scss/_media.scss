@@ -1,0 +1,36 @@
+@media (hover: hover) {
+  .portfolio .slider-btn {
+    display: inline-block!important;
+  &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .contact {
+    &__body {
+      flex-direction: column;
+      text-align: center;
+    }
+    &__links {
+      justify-content: center;
+    }
+    &__picture {
+      width: 50%;
+      margin: 0 auto 20px;
+    }
+    &__text {
+      max-width: 400px;
+    }
+    &__email, &__phone {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .dots {
+    display: none;
+  }
+}

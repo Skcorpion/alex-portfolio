@@ -1,0 +1,6 @@
+$primary-color: #6C6C6C;
+$background-color: rgb(228, 215, 215);
+
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}

@@ -1,0 +1,57 @@
+html {
+  box-sizing: border-box;
+  
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Oranienbaum', serif;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5 {
+  letter-spacing: 0.9px;
+  line-height: 15px;
+  color: $primary-color;
+  cursor: pointer;
+  font-weight: normal;
+  margin: 30px 0;
+  font-size: 20px;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  // max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+section {
+  height: 100vh;
+}
+
+.dots li a {
+  &::before {
+    background-color: $primary-color;
+  
+  }
+  &.active::before {
+    background-color: $primary-color;
+  
+  }
+
+}
